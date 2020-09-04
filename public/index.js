@@ -1,6 +1,6 @@
-import Game from "./Game.js";
-import Player from "./Player.js";
-import Deck from "./Deck.js";
+import Game from "./classes/Game.js";
+import Player from "./classes/Player.js";
+import Deck from "./classes/Deck.js";
 let game = new Game();
 let deck = new Deck();
 // basic initiation of decks and icons and deck 

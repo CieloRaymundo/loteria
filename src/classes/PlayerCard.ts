@@ -1,4 +1,4 @@
-import {IconInterface, PlayerCardInterface} from "./Interfaces";
+import {IconInterface, PlayerCardInterface} from "../Interfaces";
 
 class PlayerCard implements PlayerCardInterface{
     icons: IconInterface []; 

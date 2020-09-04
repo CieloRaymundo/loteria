@@ -1,4 +1,4 @@
-import {IconInterface, DeckInterface} from "./Interfaces";
+import {IconInterface, DeckInterface} from "../Interfaces";
 import Icon from "./Icon.js"
 
 class Deck implements DeckInterface {

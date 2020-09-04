@@ -1,4 +1,4 @@
-import {IconInterface} from "./Interfaces";
+import {IconInterface} from "../Interfaces";
 
 class Icon implements IconInterface{
     name: string;

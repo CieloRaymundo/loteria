@@ -1,5 +1,5 @@
 
-import { PlayerCardInterface, PlayerInterface, DeckInterface, IconInterface, GameInterface  } from "./Interfaces";
+import { PlayerCardInterface, PlayerInterface, DeckInterface, IconInterface, GameInterface  } from "../Interfaces";
 import Deck from "./Deck.js";
 import PlayerCard from "./PlayerCard.js";
 

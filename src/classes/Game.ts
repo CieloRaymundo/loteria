@@ -1,4 +1,4 @@
-import { DeckInterface, GameInterface, PlayerInterface, PlayerCardInterface } from "./Interfaces";
+import { DeckInterface, GameInterface, PlayerInterface, PlayerCardInterface } from "../Interfaces";
 
 class Game implements GameInterface{
     isGameWon: boolean;

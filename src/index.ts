@@ -1,8 +1,8 @@
-import Game from "./Game.js";
-import Player from "./Player.js";
-import Icon from "./Icon.js"
-import Deck from "./Deck.js";
-import PlayerCard from "./PlayerCard.js";
+import Game from "./classes/Game.js";
+import Player from "./classes/Player.js";
+import Icon from "./classes/Icon.js"
+import Deck from "./classes/Deck.js";
+import PlayerCard from "./classes/PlayerCard.js";
 
 
 let game = new Game();
