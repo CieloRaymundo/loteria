@@ -3,6 +3,9 @@ import { PlayerCardInterface, PlayerInterface, DeckInterface, IconInterface, Gam
 import Deck from "./Deck.js";
 import PlayerCard from "./PlayerCard.js";
 
+// const Deck = require("./Deck.js")
+// const PlayerCard = require("./PlayerCard.js")
+
 class Player implements PlayerInterface{
     id: number;
     username: string;

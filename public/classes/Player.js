@@ -1,5 +1,7 @@
 import Deck from "./Deck.js";
 import PlayerCard from "./PlayerCard.js";
+// const Deck = require("./Deck.js")
+// const PlayerCard = require("./PlayerCard.js")
 class Player {
     constructor(username, id) {
         this.id = id;

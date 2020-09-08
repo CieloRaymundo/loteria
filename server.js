@@ -1,8 +1,11 @@
 console.log('hi from serverjs')
 const WebSocket = require('ws');
 
+// const User = require('./user.js')
+
 // import Game from './public/classes/Games.js';
-// import Player from './public/classes/Player.js';
+// const Player = require('./public/classes/Player');
+// import Player from './public/classes/Player';
 // import Deck from "./public/classes/Deck.js";
 
 // // server
@@ -11,18 +14,19 @@ const wss = new WebSocket.Server({ port: 8080 });
 
 const clients = {};
 const games = {};
-let id = 1;
+let id = 0;
  
 wss.on('connection', function connection(ws) {
     id++;
-    clients[id] = id;
+    let newPlayer = new Player('cielo', id);
+    clients[id] = newPlayer;
 
     ws.on('open', function (){
         console.log('connection opened');
     });
     
     ws.on('message', function incoming(message) {
-    //   if (message === 'play') {
+    //   if (message === 'play') { 
     //   ///
     //   }
 
