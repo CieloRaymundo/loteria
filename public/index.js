@@ -1,15 +1,20 @@
-import Game from "./classes/Game.js";
-import Player from "./classes/Player.js";
-import Deck from "./classes/Deck.js";
-let game = new Game();
-let deck = new Deck();
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+exports.__esModule = true;
+var Game_js_1 = __importDefault(require("./classes/Game.js"));
+var Player_js_1 = __importDefault(require("./classes/Player.js"));
+var Deck_js_1 = __importDefault(require("./classes/Deck.js"));
+var game = new Game_js_1["default"]();
+var deck = new Deck_js_1["default"]();
 // basic initiation of decks and icons and deck 
 deck.initializeDeck();
 // new players
-let player1 = new Player('cielo', 1);
-let player2 = new Player('cielo2', 2);
-let player3 = new Player('cielo3', 3);
-let player4 = new Player('cielo4', 4);
+var player1 = new Player_js_1["default"]('cielo', 1);
+var player2 = new Player_js_1["default"]('cielo2', 2);
+var player3 = new Player_js_1["default"]('cielo3', 3);
+var player4 = new Player_js_1["default"]('cielo4', 4);
 // first player into game is the host
 player1.isHost = true;
 // after all players get to site they are added to game
@@ -17,12 +22,12 @@ game.players.push(player1);
 game.players.push(player2);
 game.players.push(player3);
 game.players.push(player4);
-let pulledCards = [];
+var pulledCards = [];
 // once added to game they can now play
-game.players.forEach(player => {
+game.players.forEach(function (player) {
     player.canPlay = true;
     player.getPlayerCard();
-    let nextCard = player.turnOverCard(deck);
+    var nextCard = player.turnOverCard(deck);
     pulledCards.push(nextCard);
 });
 player1.playerCard.markIcon(0);

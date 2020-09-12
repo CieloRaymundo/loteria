@@ -1,36 +1,42 @@
-import Deck from "./Deck.js";
-import PlayerCard from "./PlayerCard.js";
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+exports.__esModule = true;
+var Deck_js_1 = __importDefault(require("./Deck.js"));
+var PlayerCard_js_1 = __importDefault(require("./PlayerCard.js"));
 // const Deck = require("./Deck.js")
 // const PlayerCard = require("./PlayerCard.js")
-class Player {
-    constructor(username, id) {
+var Player = /** @class */ (function () {
+    function Player(username, id) {
         this.id = id;
         this.username = username;
         this.isHost = false;
         this.canPlay = false;
-        this.playerCard = new PlayerCard();
+        this.playerCard = new PlayerCard_js_1["default"]();
     }
     // can pull card from deck
-    turnOverCard(deck) {
+    Player.prototype.turnOverCard = function (deck) {
         if (this.canPlay) {
-            const calledIcon = deck.icons.pop();
+            var calledIcon = deck.icons.pop();
             deck.calledIcons.push(calledIcon.id);
             return calledIcon;
         }
-    }
-    callLoteria(game) {
-        game.players.forEach(player => {
+    };
+    Player.prototype.callLoteria = function (game) {
+        game.players.forEach(function (player) {
             player.canPlay = false;
         });
-    }
-    getPlayerCard() {
-        let cards = new Deck();
+    };
+    Player.prototype.getPlayerCard = function () {
+        var cards = new Deck_js_1["default"]();
         cards.initializeDeck();
         cards.shuffle();
-        for (let i = 0; i < 16; i++) {
+        for (var i = 0; i < 16; i++) {
             this.playerCard.icons.push(cards.icons[i]);
         }
         return this.playerCard;
-    }
-}
-export default Player;
+    };
+    return Player;
+}());
+exports["default"] = Player;
